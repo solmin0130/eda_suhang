@@ -4,3 +4,4 @@ matplotlib
 seaborn
 numpy
 pyrebase4
+google-cloud-storage
