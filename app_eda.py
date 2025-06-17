@@ -64,7 +64,7 @@ class EDA:
         tabs = st.tabs(["Population Trends"])
 
         # --- Population Trends ---
-        with tabs[1]:
+        with tabs[0]:
             uploaded = st.file_uploader("Population Trends - population_trends.csv 업로드", type="csv", key="pop")
             if uploaded:
                 df = pd.read_csv(uploaded)
