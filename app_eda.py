@@ -48,10 +48,6 @@ class Home:
             st.success(f"{st.session_state.get('user_email')}님 환영합니다.")
 
         st.markdown("""
-                ---
-                **Bike Sharing Demand 데이터셋**  
-                - 제공처: [Kaggle Bike Sharing Demand Competition](https://www.kaggle.com/c/bike-sharing-demand)  
-                - 설명: 2011–2012년 자전거 대여량 기록 데이터
 
                 **Population Trends 데이터셋**  
                 - 분석 목적: 연도 및 지역별 인구 변화 및 트렌드 파악
@@ -65,17 +61,7 @@ class Home:
 class EDA:
     def __init__(self):
         st.title("📊 EDA")
-        tabs = st.tabs(["Bike Sharing EDA", "Population Trends"])
-
-        # --- Bike Sharing EDA ---
-        with tabs[0]:
-            uploaded = st.file_uploader("Bike Sharing - train.csv 업로드", type="csv", key="bike")
-            if uploaded:
-                df = pd.read_csv(uploaded, parse_dates=['datetime'])
-                st.subheader("Sample 데이터")
-                st.dataframe(df.head())
-            else:
-                st.info("train.csv 파일을 업로드 해주세요.")
+        tabs = st.tabs(["Population Trends"])
 
         # --- Population Trends ---
         with tabs[1]:
